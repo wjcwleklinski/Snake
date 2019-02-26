@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wojtek.snake.MainActivity">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorBoard"
+        android:columnCount="15"
+        android:rowCount="15"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/buttonUp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="fill"
+            android:onClick="onClick"
+            android:text="Up" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/buttonLeft"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="fill"
+            android:onClick="onClick"
+            android:text="Left" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/buttonRight"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:onClick="onClick"
+            android:text="Right" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/buttonDown"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="fill"
+            android:onClick="onClick"
+            android:text="Down" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="64dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:text="Score:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="64dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:text="0"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
